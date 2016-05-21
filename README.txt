@@ -1,1 +1,1 @@
-Ovo je readme za stranicu Apartmani Spoljar koju delam.
+Ovo je readme za stranicu Apartmani Spoljar koju delam, a ovo je neka promjena.
