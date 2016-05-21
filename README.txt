@@ -1,0 +1,1 @@
+ovo je readme za ovo sranje
