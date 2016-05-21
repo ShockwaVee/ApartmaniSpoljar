@@ -1,1 +1,1 @@
-ovo je readme za ovo sranje
+Ovo je readme za stranicu Apartmani Spoljar koju delam.
