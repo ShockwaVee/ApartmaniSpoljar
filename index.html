@@ -1,10 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Apartmani Špoljar</title>
+    <meta charset="UTF-8">
+    <title>Apartmani Špoljar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Neuton' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <style>
+        /*------------------STYLE ZA NAVIGACIJU I RESPOZIVNI BUTTON------------------*/
+    
+    ul.topnav li.icon {
+        display: none;
+    }
+    
+    .icon img {
+        width: 33px;
+    }
+    
+    .material-icons {
+        display: none;
+        color: white;
+    }
+    
+    @media screen and (max-width:560px) {
+        ul.topnav li {
+            display: none;
+        }
+        ul.topnav li.icon {
+            float: left;
+            display: block;
+        }
+        ul li:last-child a {
+            border-bottom: none;
+        }
+        li a {
+            display: inline-block;
+            color: #C6C6C6;
+            text-align: center;
+            padding: 8px 52px;
+            text-decoration: none;
+            border-bottom: 1px solid #C6C6C6;
+            margin: -2px;
+        }
+        li {
+            float: left;
+        }
+        nav ul li:before {
+            content: none;
+        }
+    }
+    
+    @media screen and (max-width:560px) {
+        ul.topnav.responsive {
+            position: relative;
+        }
+        ul.topnav.responsive li.icon {}
+        ul.topnav.responsive li {
+            float: none;
+            display: inline;
+        }
+        ul.topnav.responsive li a {
+            display: block;
+            text-align: left;
+        }
+        ul.topnav.responsive .material-icons {
+            display: block;
+            float: left;
+            position: relative;
+            top: 18px;
+        }
+        /*------------------KRAJ STYLE ZA NAVIGACIJU I RESPOZIVNI BUTTON------------------*/
+    </style>
+    <script>
+    /*-----------------------SLOW SCROLL-----------------------------*/
+    $(document).ready(function()
+    {
+        $(".linkapt").click(function()
+        {
+            $('html, body').animate(
+            {
+                scrollTop: $("#apartmani").offset().top
+            }, 800);
+        });
+    });
+
+
+
+
+    /*-----------------------KRAJ SLOW SCROLL-----------------------------*/
+    </script>
 </head>
+
 <body>
-	
+    <nav>
+        <ul class="topnav">
+            <li class="icon">
+                <a href="javascript:void(0);" style="" onclick="button()"><img src="images/nav.png" /></a>
+            </li>
+            <li><a href="#">POČETAK</a></li>
+            <li><a class="linkapt" href="#">APARTMANI</a></li>
+            <li><a href="#">CJENIK</a></li>
+            <li><a href="#">GALERIJA</a></li>
+            <li><a href="#">KONTAKT</a></li>
+            <li><a href="#">LOKACIJA</a></li>
+        </ul>
+    </nav>
+    <div style="clear:both" />
+    <header id="naslovi">
+        <div class="container">
+            <h1> Dobrodošli na stranice</h1>
+            <h1>obitelji Špoljar</h1>
+            <button class="linkapt" id="nastavi"><a href="#">APARTMANI</a></button>
+        </div>
+    </header>
+    <section id="apartmani" class="siva">
+        <div class="container">
+            <h1>Apartmani</h1>
+            <p>Svi apartmani imaju terase s pogledom na more udaljeno svega 50 m.</p>
+            <p>Naravno, osiguran je i besplatan parking za Vaše vozilo te besplatan Internet.</p>
+            <p>Smjestiti se možete u apartmanima za 2 do 4 osobe: </p>
+            <div id="apt1">
+                <h2 class="lijevo">Apartman 1 (za 2-3 osobe)</h2>
+                <p class="lijevo">Sastoji se od spavaće sobe, kupaonice, kuhinje s pomoćnim krevetom i balkona.</p>
+                <div class="slike">
+                    <img src="images/apartmani/a1a.jpg" />
+                    <img src="images/apartmani/a1b.jpg" />
+                    <img src="images/apartmani/a1c.jpg" />
+                    <img src="images/apartmani/a1d.jpg" />
+                    <img src="images/apartmani/a1e.jpg" />
+                    <img src="images/apartmani/a1f.jpg" />
+                </div>
+            </div>
+            <div id="apt2">
+                <h2 class="lijevo"> Apartman 2 (za 4 osobe)</h2>
+                <p class="lijevo">Sastoji se od 2 spavaće sobe, kupaonice, kuhinje i balkona.</p>
+                <div class="slike">
+                    <img src="images/apartmani/a2a.jpg" />
+                    <img src="images/apartmani/a2b.jpg" />
+                    <img style="height:300px;" src="images/apartmani/a2c.jpg" />
+                    <img src="images/apartmani/a2d.jpg" />
+                    <img src="images/apartmani/a2e.jpg" />
+                    <img src="images/apartmani/a2f.jpg" />
+                </div>
+            </div>
+            <div id="apt3">
+                <h2 class="lijevo"> Apartman 3 (za 2-3 osobe)</h2>
+                <p class="lijevo">Sastoji se od spavaće sobe, kupaonice, kuhinje s pomoćnim krevetom i balkona.</p>
+                <div class="slike">
+                    <img style="height:300px;" src="images/apartmani/a3a.jpg" />
+                    <img src="images/apartmani/a3b.jpg" />
+                    <img src="images/apartmani/a3c.jpg" />
+                    <img style="height:300px;" src="images/apartmani/a3d.jpg" />
+                    <img src="images/apartmani/a3e.jpg" />
+                    <img style="height:300px;" src="images/apartmani/a3f.jpg" />
+                </div>
+            </div>
+            <div id="apt4">
+                <h2 class="lijevo"> Apartman 4 (za 2-3 osobe)</h2>
+                <p class="lijevo">Sastoji se od spavaće sobe, kupaonice, kuhinje s pomoćnim krevetom i balkona.</p>
+                <div class="slike">
+                    <img src="images/apartmani/a4a.jpg" />
+                    <img src="images/apartmani/a4b.jpg" />
+                    <img style="height:300px;" src="images/apartmani/a4c.jpg" />
+                    <img src="images/apartmani/a4d.jpg" />
+                    <img style="height:300px;" src="images/apartmani/a4e.jpg" />
+                    <img style="height:300px;" src="images/apartmani/a4f.jpg" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+    /*-----------------------------BUTTON ZA RESPONSIVE------------------*/
+    function button()
+    {
+        document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
+    }
+    /*---------------------------KRAJ BUTTON ZA RESPONSIVE----------------*/
+    </script>
 </body>
+
 </html>
