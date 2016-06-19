@@ -174,17 +174,17 @@
     </style>
 </head>
 
-<body>
+<body id="gore">
     <nav>
         <ul class="topnav">
             <li class="icon">
                 <a href="javascript:void(0);" style="" onclick="button()"><img src="images/nav.png" /></a>
             </li>
-            <li><a href="#">POČETAK</a></li>
-            <li><a class="linkapt" href="#">APARTMANI</a></li>
-            <li><a href="#">GALERIJA</a></li>
-            <li><a href="#">KONTAKT</a></li>
-            <li><a href="#">LOKACIJA</a></li>
+            <li><a href="#gore">POČETAK</a></li>
+            <li><a href="#galerija">GALERIJA</a></li>
+            <li><a href="#apartmani">APARTMANI</a></li>
+            <li><a href="#lokacija">LOKACIJA</a></li>
+            <li><a href="#kontakt">KONTAKT</a></li>
         </ul>
     </nav>
     <div style="clear:both" />
@@ -192,7 +192,7 @@
         <div class="container">
             <h1 id="zabefore"> Dobrodošli na stranice</h1>
             <h1>obitelji Špoljar</h1>
-            <button id="nastavi"><a href="#">GALERIJA</a></button>
+            <button class="nastavi"><a href="#">GALERIJA</a></button>
         </div>
     </header>
     <section id="galerija" class="svijetloPlava">
@@ -246,7 +246,7 @@
                 <span data-u="arrowright" class="jssora12r" style="top:0px;right:0px;width:30px;height:46px;" data-autocenter="2"></span>
             </div>
             <!-- #endregion Jssor Slider End -->
-            <button id="nastavi"><a href="#">APARTMANI</a></button>
+            <button class="nastavi"><a href="#">APARTMANI</a></button>
         </div>
     </section>
     <section id="apartmani" class="siva">
@@ -321,11 +321,36 @@
             </div>
         </div>
     </section>
-    <section id="lokacija">
+    <section class="siva2" id="lokacija">
         <div class="container">
+            <h1>Gdje se nalazimo</h1>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22669.68709357311!2d14.771990417405924!3d44.74591486232108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDQ0JzQ1LjMiTiAxNMKwNDcnMjIuMiJF!5e0!3m2!1shr!2shr!4v1466356779358" frameborder="0" style="border:0"></iframe>
+            <p class="lijevo">Adresa:</p>
+            <p class="lijevo">Banjol 796 A, 51280 Rab</p>
         </div>
     </section>
+    <section class="siva" id="kontakt">
+        <div class="container">
+            <h1>Kontaktirajte nas</h1>
+            <p class="lijevo">Možete nas kontaktirati putem ove forme ili poslati mail na <a href="mailto:info@apartmani-spoljar.com?Subject=[AS]" target="_top">info@apartmani-spoljar.com</a></p>
+            <form>
+                <p class="lijevo">Ime i prezime</p>
+                <input type="text" name="imeprezime" required>
+                <p class="lijevo">Email</p>
+                <input type="email" name="mail" required>
+                <p class="lijevo">Poruka</p>
+                <textarea id="poruka" required></textarea>
+                <div style="clear:both"></div>
+                <input class="sendreset" type="submit" value="POŠALJI" />
+                <input class="sendreset desno" type="reset" value="OBRIŠI SVE" />
+            </form>
+            <div style="clear:both"></div>
+            <p class="lijevo">Na poslane mailove odgovorit ćemo u najkraćem mogućem roku.</p>
+            <p class="lijevo">Ako imate potrebu kontaktirati nas usmeno, možete to učiniti na sljedećim brojevima: </p>
+            <p class="lijevo">+38551721840, +38635708870, +385981968513, +385994188161</p>
+        </div>
+    </section>
+    <a id="navrh" href="#gore">NA VRH</a>
     <script>
     /*-----------------------------BUTTON ZA RESPONSIVE------------------*/
     function button()
