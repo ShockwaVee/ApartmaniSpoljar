@@ -180,11 +180,11 @@
             <li class="icon">
                 <a href="javascript:void(0);" style="" onclick="button()"><img src="images/nav.png" /></a>
             </li>
-            <li><a href="#gore">POČETAK</a></li>
-            <li><a href="#galerija">GALERIJA</a></li>
-            <li><a href="#apartmani">APARTMANI</a></li>
-            <li><a href="#lokacija">LOKACIJA</a></li>
-            <li><a href="#kontakt">KONTAKT</a></li>
+            <li><a class="pocetakLink" href="#gore">POČETAK</a></li>
+            <li><a class="galerijaLink" href="#galerija">GALERIJA</a></li>
+            <li><a class="apartmaniLink" href="#apartmani">APARTMANI</a></li>
+            <li><a id="lokacijaLink" href="#lokacija">LOKACIJA</a></li>
+            <li><a id="kontaktLink" href="#kontakt">KONTAKT</a></li>
         </ul>
     </nav>
     <div style="clear:both" />
@@ -192,7 +192,7 @@
         <div class="container">
             <h1 id="zabefore"> Dobrodošli na stranice</h1>
             <h1>obitelji Špoljar</h1>
-            <button class="nastavi"><a href="#">GALERIJA</a></button>
+           <a class="galerijaLink nastavi" href="#galerija"><span>GALERIJA</span></a>
         </div>
     </header>
     <section id="galerija" class="svijetloPlava">
@@ -246,7 +246,7 @@
                 <span data-u="arrowright" class="jssora12r" style="top:0px;right:0px;width:30px;height:46px;" data-autocenter="2"></span>
             </div>
             <!-- #endregion Jssor Slider End -->
-            <button class="nastavi"><a href="#">APARTMANI</a></button>
+           <a class="apartmaniLink nastavi" href="#apartmani"><span>APARTMANI</span></a>
         </div>
     </section>
     <section id="apartmani" class="siva">
@@ -350,18 +350,11 @@
             <p class="lijevo">+38551721840, +38635708870, +385981968513, +385994188161</p>
         </div>
     </section>
-    <a id="navrh" href="#gore">NA VRH</a>
-    <script>
-    /*-----------------------------BUTTON ZA RESPONSIVE------------------*/
-    function button()
-    {
-        document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
-    }
-    /*---------------------------KRAJ BUTTON ZA RESPONSIVE----------------*/
-    </script>
+    <a class="pocetakLink" id="navrh" href="#gore">NA VRH</a>
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
     <script src="js/lightbox.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
