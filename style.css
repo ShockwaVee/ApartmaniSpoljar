@@ -16,7 +16,7 @@ main {
 }
 
 header {
-    background: url(images/pattern.png);
+    background: url(../images/pattern.png);
     display: block;
 }
 
@@ -26,7 +26,18 @@ header {
     padding-bottom: 200px;
 }
 
-#naslovi h1, #apartmani h1, #apartmani h2 {
+#zabefore:after {
+    content: "";
+    display: block;
+    position: relative;
+    bottom: -26px;
+    left: 180px;
+    height: 3px;
+    width: 70%;
+    background: rgba(0, 0, 0, 0.84);
+}
+
+#naslovi h1, #apartmani h1, #apartmani h2, #galerija h1 {
     font-family: Montserrat, Arial;
     color: #2F343A;
     font-size: 4.4em;
@@ -140,13 +151,17 @@ nav {
     width: 100%;
 }
 
-#apartmani p {
+#apartmani p, #galerija p {
     font-family: 'Neuton', Helvetica;
     color: #F5F5F5;
     font-size: 1.3em;
     margin: 7px 0;
     text-align: center;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.84);
+}
+#galerija p{
+    color:#5A5A5A;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.44);
 }
 
 #apartmani p:last-child {
@@ -163,7 +178,7 @@ nav {
     flex-wrap: wrap;
 }
 
-.slike img {
+.onpage {
     width: 400px;
     margin-bottom: 15px;
     border: 4px solid #DDDDDD;
@@ -177,4 +192,15 @@ nav {
 
 .lijevo {
     text-align: left!important;
+}
+
+#galerija {
+    padding-bottom: 100px;
+    display: inline-block;
+    width: 100%;
+}
+
+.svijetloPlava{
+    background:#DDECEF;
+
 }
