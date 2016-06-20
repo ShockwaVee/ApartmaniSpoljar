@@ -13,6 +13,7 @@
         .container {
             width: 70%;
             margin: 0 auto;
+            min-width: 370px;
         }
         
         header {
@@ -31,9 +32,9 @@
             display: block;
             position: relative;
             bottom: -26px;
-            left: 180px;
+            left: 0px;
             height: 3px;
-            width: 70%;
+            width: 100%;
             background: rgba(0, 0, 0, 0.84);
         }
         
@@ -252,10 +253,6 @@
         }
         
         .sendreset {
-            width: 40%;
-        }
-        
-        .sendreset {
             float: left;
             margin-top: 10px;
             margin-bottom: 20px;
@@ -263,9 +260,9 @@
             border-radius: 5px;
             border: none;
             cursor: pointer;
-            -webkit-transition: background-color .7s ease, color .7s ease;
-            -o-transition: background-color .7s ease, color .7s ease;
-            transition: background-color .7s ease, color .7s ease;
+            -webkit-transition: background-color .7s ease, color .7s ease, opacity .7s ease-in;
+            -o-transition: background-color .7s ease, color .7s ease, opacity .7s ease-in;
+            transition: background-color .7s ease, color .7s ease, opacity .7s ease-in;
             font-family: Montserrat, Arial;
             color: #F5F5F5;
             font-size: 1.4em;
@@ -273,6 +270,7 @@
             padding: 22px 42px;
             display: block;
             letter-spacing: 1.2px;
+            width: 40%;
         }
         
         .sendreset:hover {
@@ -313,8 +311,6 @@
         }
         
         @media screen and (max-width:1620px) and (min-width:1382px) {
-            /*.onpage {
-            width: 450px;*/
             .container {
                 width: 90%;
             }
@@ -324,11 +320,55 @@
             .onpage {
                 width: 400px;
             }
+            #naslovi h1, #apartmani h1, #apartmani h2, #galerija h1, #lokacija h1, #kontakt h1 {
+                font-size: 3.5em;
+            }
+            #apartmani h1, #kontakt h1 {
+                font-size: 2.7em;
+                color: #DDDDDD;
+            }
+            #apartmani h2 {
+                font-size: 1.3em;
+                color: #DDDDDD;
+            }
+            #zabefore:after {
+                bottom: -20px;
+            }
         }
         
         @media screen and (max-width:1184px) {
             .onpage {
                 width: 325px;
+            }
+            #naslovi h1, #apartmani h1, #apartmani h2, #galerija h1, #lokacija h1, #kontakt h1 {
+                font-size: 2.5em;
+            }
+            #apartmani h1, #kontakt h1 {
+                font-size: 1.7em;
+                color: #DDDDDD;
+            }
+            #apartmani h2 {
+                font-size: 1.2em;
+                color: #DDDDDD;
+            }
+            #zabefore:after {
+                bottom: -15px;
+            }
+            #apartmani p, #galerija p, #lokacija p, #kontakt p {
+                font-size: 1.1em;
+            }
+            #kontakt input:not(:nth-child(n+5)) {
+                width: 99.5%;
+            }
+            .sendreset {
+                font-size: 1.1em;
+                padding: 12px 0px;
+            }
+            #navrh {
+                opacity: 0.6;
+            }
+            #navrh:hover {
+                opacity: 1;
             }
         }
         
@@ -337,7 +377,34 @@
                 -webkit-justify-content: center;
                 justify-content: center;
             }
-                        .onpage {
+            .onpage {
                 width: 400px;
+            }
+            nav ul li {
+                font-size: 1.1em;
+            }
+            nav li a {
+                padding: 14px 17px;
+            }
+        }
+        
+        @media screen and (max-width:688px) {
+            #naslovi h1, #apartmani h1, #apartmani h2, #galerija h1, #lokacija h1, #kontakt h1 {
+                font-size: 1.7em;
+            }
+            #zabefore:after {
+                bottom: -10px;
+            }
+                        nav ul li {
+                font-size: 0.98em;
+            }
+            nav li a {
+                padding: 14px 13px;
+            }
+        }
+        
+        @media screen and (max-width:600px) {
+            #navrh {
+                display: none;
             }
         }
