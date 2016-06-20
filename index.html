@@ -8,21 +8,29 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Neuton' rel='stylesheet' type='text/css'>
     <link href="css/lightbox.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=0.86">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <style>
         /*------------------STYLE ZA NAVIGACIJU I RESPOZIVNI BUTTON------------------*/
     
     ul.topnav li.icon {
         display: none;
+        width: 100%;
     }
     
     .icon img {
         width: 33px;
+        position: relative;
+        top: 5px;
     }
     
     .material-icons {
         display: none;
         color: white;
+    }
+    
+    ul.topnav {
+        width: 100%;
     }
     
     @media screen and (max-width:560px) {
@@ -51,14 +59,12 @@
         nav ul li:before {
             content: none;
         }
-        #navrh {
-            display: none;
-        }
     }
     
     @media screen and (max-width:560px) {
         ul.topnav.responsive {
             position: relative;
+            margin: 0;
         }
         ul.topnav.responsive li.icon {}
         ul.topnav.responsive li {
@@ -74,6 +80,15 @@
             float: left;
             position: relative;
             top: 18px;
+        }
+        nav.responsive {
+            width: 100%;
+            position:fixed!important;
+        }
+        ul.topnav.responsive li:not(:first-child) a {
+            position: relative;
+            top: 38px;
+            background-color:rgba(90,90,90,.6);
         }
         /*------------------KRAJ STYLE ZA NAVIGACIJU I RESPOZIVNI BUTTON------------------*/
     </style>
@@ -354,6 +369,13 @@
         </div>
     </section>
     <a class="pocetakLink" id="navrh" href="#gore">NA VRH</a>
+    <footer>
+        <div id="content">
+            <div class="container">
+                <p> &copy; Davor Tvorić | 2016. </p>
+            </div>
+        </div>
+    </footer>
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
     <script src="js/lightbox.js"></script>

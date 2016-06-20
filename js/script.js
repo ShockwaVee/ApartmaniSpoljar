@@ -1,7 +1,15 @@
     /*-----------------------------BUTTON ZA RESPONSIVE------------------*/
     function button() {
         document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
+        $("nav").toggleClass('responsive');
     }
+    $("section, header").click(function() {
+        if ($("nav").hasClass('responsive')) {
+            document.getElementsByClassName("topnav")[0].classList.remove("responsive");
+            $("nav").removeClass('responsive');
+        }
+
+    });
     /*---------------------------KRAJ BUTTON ZA RESPONSIVE----------------*/
 
     $('.pocetakLink').click(function() {
