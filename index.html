@@ -10,6 +10,10 @@
     <link href="css/lightbox.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=0.86">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/modernizr.custom.26887.js"></script>
+    <noscript>
+        <link rel="stylesheet" type="text/css" href="css/noscript.css" />
+    </noscript>
     <style>
         /*------------------STYLE ZA NAVIGACIJU I RESPOZIVNI BUTTON------------------*/
     
@@ -83,12 +87,12 @@
         }
         nav.responsive {
             width: 100%;
-            position:fixed!important;
+            position: fixed!important;
         }
         ul.topnav.responsive li:not(:first-child) a {
             position: relative;
             top: 38px;
-            background-color:rgba(90,90,90,.6);
+            background-color: rgba(90, 90, 90, .6);
         }
         /*------------------KRAJ STYLE ZA NAVIGACIJU I RESPOZIVNI BUTTON------------------*/
     </style>
@@ -216,7 +220,27 @@
     <section id="galerija" class="svijetloPlava">
         <h1> Galerija </h1>
         <p> Svojim se očima uvjerite u odličnu kvalitetu i ljepotu naših apartmana.</p>
-        <div class="container">
+        <div class="main">
+            <div class="fs-slider" id="fs-slider">
+                <figure>
+                    <img src="images/galerija/thumbs/slika001.jpg"  />
+                </figure>
+                <figure>
+                    <img src="images/galerija/thumbs/slika002.jpg"  />
+                </figure>
+                <figure>
+                    <img src="images/galerija/thumbs/slika003.jpg"  />
+                </figure>
+                <figure>
+                    <img src="images/galerija/thumbs/slika004.jpg"  />
+                </figure>
+                <figure>
+                    <img src="images/galerija/thumbs/slika005.jpg"  />
+                </figure>
+            </div>
+            <!-- /fs-slider -->
+        </div>
+       <!-- <div class="container">
             <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 500px; height: 375px; overflow: hidden; visibility: hidden;">
                 <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 500px; height: 375px; overflow: hidden;">
                     <div data-p="112.50" style="display: none;">
@@ -258,11 +282,11 @@
                     <div data-p="112.50" style="display: none;">
                         <img data-u="image" src="images/galerija/thumbs/slika013.jpg" />
                     </div>
-                </div>
+                </div>-->
                 <!-- Arrow Navigator -->
-                <span data-u="arrowleft" class="jssora12l" style="top:0px;left:0px;width:30px;height:46px;" data-autocenter="2"></span>
+                <!--<span data-u="arrowleft" class="jssora12l" style="top:0px;left:0px;width:30px;height:46px;" data-autocenter="2"></span>
                 <span data-u="arrowright" class="jssora12r" style="top:0px;right:0px;width:30px;height:46px;" data-autocenter="2"></span>
-            </div>
+            </div>-->
             <!-- #endregion Jssor Slider End -->
             <a class="apartmaniLink nastavi" href="#apartmani"><span>APARTMANI</span></a>
         </div>
@@ -377,9 +401,18 @@
         </div>
     </footer>
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+    <!--<script type="text/javascript" src="js/jssor.slider.mini.js"></script>-->
     <script src="js/lightbox.js"></script>
     <script src="js/script.js"></script>
+    <script type="text/javascript" src="js/jquery.imgslider.js"></script>
+    <script type="text/javascript">
+    $(function()
+    {
+
+        $('#fs-slider').imgslider();
+
+    });
+    </script>
 </body>
 
 </html>
