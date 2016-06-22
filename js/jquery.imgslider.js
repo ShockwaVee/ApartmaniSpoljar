@@ -263,12 +263,12 @@
             // add navigation if needed
             if (this.initElemsCount > 3) {
 
-                /*var $nav = $('<nav class="fs-navigation"><span>Previous</span><span>Next</span></nav>').appendTo(this.$el.parent());
+                var $nav = $('<nav class="fs-navigation"><span>Previous</span><span>Next</span></nav>').appendTo(this.$el.parent());
 
                 // next and previous
                 this.$navPrev = $nav.find('span:first');
                 this.$navNext = $nav.find('span:last');
-                console.log(this);*/
+                
 
                 this._initNavigationEvents();
 
@@ -314,20 +314,7 @@
 
             var _self = this;
 
-           /* this.$navPrev.on('click.imgslider', function() {
-
-                if (_self.options.autoplay) {
-
-                    clearTimeout(_self.slideshow);
-                    _self.options.autoplay = false;
-
-                }
-
-                _self._navigate('left');
-
-            });*/
-
-            this.$blockL.on('click.imgslider', function() {
+           this.$navPrev.on('click.imgslider', function() {
 
                 if (_self.options.autoplay) {
 
@@ -339,7 +326,20 @@
                 _self._navigate('left');
 
             });
-           /* this.$navNext.on('click.imgslider', function() {
+
+            this.$blockR.on('click.imgslider', function() {
+
+                if (_self.options.autoplay) {
+
+                    clearTimeout(_self.slideshow);
+                    _self.options.autoplay = false;
+
+                }
+
+                _self._navigate('left');
+
+            });
+            this.$navNext.on('click.imgslider', function() {
 
                 if (_self.options.autoplay) {
 
@@ -350,8 +350,8 @@
 
                 _self._navigate('right');
 
-            });*/
-            this.$blockR.on('click.imgslider', function() {
+            });
+            this.$blockL.on('click.imgslider', function() {
 
                 if (_self.options.autoplay) {
 
