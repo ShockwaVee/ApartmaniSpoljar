@@ -410,7 +410,7 @@
                 opacity: 1;
             }
             .fs-navigation {
-                display: initial;
+                display: block;
             }
             .fs-block:nth-child(1), .fs-block:nth-child(3) {
                 visibility: hidden;
