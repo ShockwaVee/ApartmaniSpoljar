@@ -3,7 +3,7 @@
         document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
         $("nav").toggleClass('responsive');
     }
-    $("section, header").click(function() {
+    $("section, header,footer").click(function() {
         if ($("nav").hasClass('responsive')) {
             document.getElementsByClassName("topnav")[0].classList.remove("responsive");
             $("nav").removeClass('responsive');
@@ -42,3 +42,25 @@
         }, 600);
         return false;
     });
+
+    $('h2').click(function() {
+        $(this).animate({
+                blind: $(this).next().toggle('blind')
+            },
+            1000);
+        return false;
+
+    });
+    /*function bindEvent(element, eventName, eventHandler) {
+        var el = $(element)[0];
+        if (el.addEventListener) {
+            el.addEventListener(eventName, eventHandler, false)
+        } else if (el.attachEvent) {
+            el.attachEvent('on' + eventName, eventHandler);
+        }
+    }
+    bindEvent('#headapt1', 'click', function() {
+        $('#apt1').toggle('blind');
+
+
+    });*/
