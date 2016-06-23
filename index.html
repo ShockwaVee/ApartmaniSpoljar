@@ -197,24 +197,34 @@
 </head>
 
 <body id="gore">
-    <nav>
-        <ul class="topnav">
-            <li class="icon">
-                <a href="javascript:void(0);" style="" onclick="button()"><img src="images/nav.png" /></a>
-            </li>
-            <li><a class="pocetakLink" href="#gore">POČETAK</a></li>
-            <li><a class="galerijaLink" href="#galerija">GALERIJA</a></li>
-            <li><a class="apartmaniLink" href="#apartmani">APARTMANI</a></li>
-            <li><a id="lokacijaLink" href="#lokacija">LOKACIJA</a></li>
-            <li><a id="kontaktLink" href="#kontakt">KONTAKT</a></li>
-        </ul>
-    </nav>
+    <div class="animation-element bounce-up">
+        <nav>
+            <ul class="topnav">
+                <li class="icon">
+                    <a href="javascript:void(0);" style="" onclick="button()"><img src="images/nav.png" /></a>
+                </li>
+                <li><a class="pocetakLink" href="#gore">POČETAK</a></li>
+                <li><a class="galerijaLink" href="#galerija">GALERIJA</a></li>
+                <li><a class="apartmaniLink" href="#apartmani">APARTMANI</a></li>
+                <li><a id="lokacijaLink" href="#lokacija">LOKACIJA</a></li>
+                <li><a id="kontaktLink" href="#kontakt">KONTAKT</a></li>
+            </ul>
+        </nav>
+    </div>
     <div style="clear:both" />
     <header id="naslovi">
         <div class="container">
-            <h1 id="zabefore"> Dobrodošli na stranice</h1>
-            <h1>obitelji Špoljar</h1>
-            <a class="galerijaLink nastavi" href="#galerija"><span>GALERIJA</span></a>
+            <div class="animation-element bounce-down">
+                <h1>Dobrodošli na stranice</h1>
+            </div>
+            <div class="animation-element crta">
+            </div>
+            <div class="animation-element bounce-up">
+                <h1>obitelji Špoljar</h1>
+            </div>
+            <div class="animation-element bounce-up">
+                <a class="galerijaLink nastavi" href="#galerija"><span>GALERIJA</span></a>
+            </div>
         </div>
     </header>
     <section id="galerija" class="svijetloPlava">
@@ -321,7 +331,6 @@
             <p>Svi apartmani imaju terase s pogledom na more udaljeno svega 50 m.</p>
             <p>Naravno, osiguran je besplatan parking za Vaše vozilo te besplatan Internet.</p>
             <p>Smjestiti se možete u apartmanima za 2 do 4 osobe (pritisnite naslov za dodatne informacije o svakom apartmanu): </p>
-          
             <h2 class="lijevo">Apartman 1 (za 2-3 osobe)</h2>
             <div style="display:none;" id="apt1">
                 <p class="lijevo">Sastoji se od spavaće sobe, kupaonice, kuhinje s pomoćnim krevetom i balkona.</p>

@@ -29,15 +29,27 @@
             padding-bottom: 200px;
         }
         
-        #zabefore:after {
+        .crta {
             content: "";
             display: block;
             position: relative;
             bottom: -26px;
-            left: 0px;
+            left: 50%;
             height: 3px;
+            width: 0%;
+            transform: translateX(-50%);
+            border-radius: 6px;
+            background: #1c1c38;
+            opacity: 0;
+            -moz-transition: all 400ms ease-out;
+            -webkit-transition: all 400ms ease-out;
+            -o-transition: all 400ms ease-out;
+            transition: all 400ms ease-out;
+        }
+        
+        .crta.in-view {
+            opacity: 1;
             width: 100%;
-            background: rgba(0, 0, 0, 0.84);
         }
         
         #naslovi h1, #apartmani h1, #apartmani h2, #galerija h1, #lokacija h1, #kontakt h1 {
@@ -46,6 +58,10 @@
             font-size: 4.4em;
             text-align: center;
             text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.84);
+        }
+        
+        #naslovi .animation-element:first-child h1 {
+            margin: 0;
         }
         
         #apartmani h1, #kontakt h1 {
@@ -57,8 +73,9 @@
             font-size: 2.2em;
             color: #DDDDDD;
         }
-        h2{
-            cursor:pointer;
+        
+        h2 {
+            cursor: pointer;
             text-decoration: underline;
         }
         
@@ -137,7 +154,7 @@
             content: "";
             display: block;
             position: relative;
-            bottom: -49px;
+            bottom: -51px;
             left: -2px;
             height: 3px;
             width: 0px;
@@ -374,7 +391,7 @@
                 font-size: 1.3em;
                 color: #DDDDDD;
             }
-            #zabefore:after {
+            #zabefore {
                 bottom: -20px;
             }
         }
@@ -394,7 +411,7 @@
                 font-size: 1.2em;
                 color: #DDDDDD;
             }
-            #zabefore:after {
+            #zabefore {
                 bottom: -15px;
             }
             #apartmani p, #galerija p, #lokacija p, #kontakt p {
@@ -445,7 +462,7 @@
             #naslovi h1, #apartmani h1, #apartmani h2, #galerija h1, #lokacija h1, #kontakt h1 {
                 font-size: 1.7em;
             }
-            #zabefore:after {
+            #zabefore {
                 bottom: -10px;
             }
             nav ul li {
@@ -454,7 +471,6 @@
             nav li a {
                 padding: 14px 13px;
             }
-      
         }
         
         @media screen and (max-width:600px) {
@@ -769,4 +785,54 @@
             .fs-block figcaption p {
                 font-size: 13px;
             }
+        }
+        
+        .bounce-down {
+            opacity: 0;
+            -moz-transition: all 400ms ease-out;
+            -webkit-transition: all 400ms ease-out;
+            -o-transition: all 400ms ease-out;
+            transition: all 400ms ease-out;
+            -moz-transform: translate3d(0px, -200px, 0px);
+            -webkit-transform: translate3d(0px, -200px, 0px);
+            -o-transform: translate(0px, -200px);
+            -ms-transform: translate(0px, -200px);
+            transform: translate3d(0px, -200px, 0px);
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        
+        .bounce-down.in-view {
+            opacity: 1;
+            -moz-transform: translate3d(0px, 0px, 0px);
+            -webkit-transform: translate3d(0px, 0px, 0px);
+            -o-transform: translate(0px, 0px);
+            -ms-transform: translate(0px, 0px);
+            transform: translate3d(0px, 0px, 0px);
+        }
+        
+        .bounce-up {
+            opacity: 0;
+            -moz-transition: all 400ms ease-out;
+            -webkit-transition: all 400ms ease-out;
+            -o-transition: all 400ms ease-out;
+            transition: all 400ms ease-out;
+            -moz-transform: translate3d(0px, 200px, 0px);
+            -webkit-transform: translate3d(0px, 200px, 0px);
+            -o-transform: translate(0px, 200px);
+            -ms-transform: translate(0px, 200px);
+            transform: translate3d(0px, 200px, 0px);
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        
+        .bounce-up.in-view {
+            opacity: 1;
+            -moz-transform: translate3d(0px, 0px, 0px);
+            -webkit-transform: translate3d(0px, 0px, 0px);
+            -o-transform: translate(0px, 0px);
+            -ms-transform: translate(0px, 0px);
+            transform: translate3d(0px, 0px, 0px);
         }
