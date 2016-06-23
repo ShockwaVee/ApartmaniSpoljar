@@ -391,7 +391,7 @@
                 font-size: 1.3em;
                 color: #DDDDDD;
             }
-            #zabefore {
+            .crta {
                 bottom: -20px;
             }
         }
@@ -411,7 +411,7 @@
                 font-size: 1.2em;
                 color: #DDDDDD;
             }
-            #zabefore {
+            .crta {
                 bottom: -15px;
             }
             #apartmani p, #galerija p, #lokacija p, #kontakt p {
@@ -462,7 +462,7 @@
             #naslovi h1, #apartmani h1, #apartmani h2, #galerija h1, #lokacija h1, #kontakt h1 {
                 font-size: 1.7em;
             }
-            #zabefore {
+            .crta {
                 bottom: -10px;
             }
             nav ul li {
