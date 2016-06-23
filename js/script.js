@@ -44,13 +44,10 @@
     });
 
     $('h2').click(function() {
-        $(this).animate({
-                blind: $(this).next().toggle('blind')
-            },
-            1000);
-        return false;
+        $(this).next().toggle('blind');
 
     });
+
     /*function bindEvent(element, eventName, eventHandler) {
         var el = $(element)[0];
         if (el.addEventListener) {
