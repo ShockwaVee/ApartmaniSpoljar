@@ -280,7 +280,7 @@
         
         #kontakt input:not(:nth-child(n+5)) {
             width: 45%;
-            height: 25px;
+           
         }
         
         #kontakt a {
@@ -835,3 +835,40 @@
             -ms-transform: translate(0px, 0px);
             transform: translate3d(0px, 0px, 0px);
         }
+        
+        .bounce-left {
+            opacity: 0;
+            -moz-transition: all 500ms ease-out;
+            -webkit-transition: all 500ms ease-out;
+            -o-transition: all 500ms ease-out;
+            transition: all 500ms ease-out;
+            -webkit-transform: translateX(-400px);
+            -ms-transform: translateX(-400px);
+            -o-transform: translateX(-400px);
+            transform: translateX(-400px);
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        
+        .bounce-left.in-view {
+            opacity: 1;
+            -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+            -o-transform: translateX(0);
+            transform: translateX(0);
+        }
+        
+        .delay {
+            -webkit-transition-delay: 500ms;
+            -o-transition-delay: 500ms;
+            transition-delay: 500ms; 
+
+        }
+
+        .delay1 {
+                        -webkit-transition-delay: 800ms;
+            -o-transition-delay: 800ms;
+            transition-delay: 800ms; 
+        }
+

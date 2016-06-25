@@ -408,17 +408,21 @@
             <h1>Kontaktirajte nas</h1>
             <p class="lijevo">Možete nas kontaktirati putem ove forme ili poslati mail na <a href="mailto:info@apartmani-spoljar.com?Subject=[AS]" target="_top">info@apartmani-spoljar.com</a></p>
             <form>
-                <div class="animation-element bounce-down">
+                <div class="animation-once bounce-left">
                     <p class="lijevo">Ime i prezime</p>
                     <input type="text" name="imeprezime" required>
                 </div>
-                <p class="lijevo">Email</p>
-                <input type="email" name="mail" required>
-                <p class="lijevo">Poruka</p>
-                <textarea id="poruka" required></textarea>
-                <div style="clear:both"></div>
-                <input class="sendreset" type="submit" value="POŠALJI" />
-                <input class="sendreset desno" type="reset" value="OBRIŠI SVE" />
+                <div class="animation-once delay bounce-left">
+                    <p class="lijevo">Email</p>
+                    <input type="email" name="mail" required>
+                </div>
+                <div class="animation-once delay1 bounce-left">
+                    <p class="lijevo">Poruka</p>
+                    <textarea id="poruka" required></textarea>
+                    <div style="clear:both"></div>
+                    <input class="sendreset" type="submit" value="POŠALJI" />
+                    <input class="sendreset desno" type="reset" value="OBRIŠI SVE" />
+                </div>
             </form>
             <div style="clear:both"></div>
             <p class="lijevo">Na poslane mailove odgovorit ćemo u najkraćem mogućem roku.</p>
