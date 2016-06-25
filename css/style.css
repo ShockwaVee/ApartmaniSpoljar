@@ -23,6 +23,11 @@
             display: block;
             background-size: cover;
         }
+        
+        @font-face {
+            font-family: naslov;
+            src: url(../fonts/Biko_Regular.otf);
+        }
         /* header:before {
             content: "";
             display: inline-block;
@@ -69,7 +74,7 @@
         }
         
         #naslovi h1, #apartmani h1, #apartmani h2, #galerija h1, #lokacija h1, #kontakt h1 {
-            font-family: Montserrat, Arial;
+            font-family: naslov, Arial;
             color: #000;
             font-size: 4.4em;
             text-align: center;
@@ -103,14 +108,14 @@
             display: block;
             margin: 0 auto;
             margin-top: 100px;
-            background-color: #80CEB9;
+            background-color: #06425C;
             border-radius: 5px;
             border: none;
             cursor: pointer;
             -webkit-transition: background-color .7s ease, color .7s ease;
             -o-transition: background-color .7s ease, color .7s ease;
             transition: background-color .7s ease, color .7s ease;
-            font-family: Montserrat, Arial;
+            font-family: naslov, Arial;
             color: #F5F5F5;
             font-size: 1.2em;
             text-decoration: none;
@@ -125,7 +130,7 @@
         }
         
         .nastavi:hover {
-            background-color: #41AAC4;
+            background-color: #0396E0;
             color: #fff;
         }
         
@@ -319,14 +324,14 @@
             float: left;
             margin-top: 10px;
             margin-bottom: 20px;
-            background-color: #80CEB9;
+            background-color: #06425C;
             border-radius: 5px;
             border: none;
             cursor: pointer;
             -webkit-transition: background-color .7s ease, color .7s ease, opacity .7s ease-in;
             -o-transition: background-color .7s ease, color .7s ease, opacity .7s ease-in;
             transition: background-color .7s ease, color .7s ease, opacity .7s ease-in;
-            font-family: Montserrat, Arial;
+            font-family: naslov, Arial;
             color: #F5F5F5;
             font-size: 1.4em;
             text-decoration: none;
@@ -337,7 +342,7 @@
         }
         
         .sendreset:hover {
-            background-color: #41AAC4;
+            background-color: #0396E0;;
             color: #fff;
         }
         
@@ -346,17 +351,17 @@
             bottom: 6%;
             right: 2%;
             display: block;
-            background-color: #80CEB9;
-            font-family: Montserrat, Arial;
+            background-color: #06425C;
+            font-family: naslov, Arial;
             color: #F5F5F5;
             font-size: 1.em;
             text-decoration: none;
             padding: 31px 10px;
             display: block;
             letter-spacing: 1.2px;
-            -webkit-transition: color .7s ease, background-color .7s ease;
-            -o-transition: color .7s ease, background-color .7s ease;
-            transition: color .7s ease, background-color .7s ease;
+            -webkit-transition: all.7s ease;
+            -o-transition: all .7s ease;
+            transition: all .7s ease;
             border-radius: 70%;
             border: none;
             cursor: pointer;
@@ -364,7 +369,7 @@
         }
         
         #navrh:hover {
-            background-color: #41AAC4;
+            background-color: #0396E0;;
             color: #fff;
         }
         
