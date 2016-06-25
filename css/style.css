@@ -23,6 +23,21 @@
             display: block;
             background-size: cover;
         }
+        /* header:before {
+            content: "";
+            display: inline-block;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: -100;
+            background: url(../images/bg11.jpg) no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }*/
         
         #naslovi {
             margin: 0 auto;
@@ -55,10 +70,14 @@
         
         #naslovi h1, #apartmani h1, #apartmani h2, #galerija h1, #lokacija h1, #kontakt h1 {
             font-family: Montserrat, Arial;
-            color: #2F343A;
+            color: #000;
             font-size: 4.4em;
             text-align: center;
             text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.84);
+        }
+        
+        #naslovi h1 {
+            color: #fff;
         }
         
         #naslovi .animation-element:first-child h1 {
@@ -67,12 +86,12 @@
         
         #apartmani h1, #kontakt h1 {
             font-size: 3.6em;
-            color: #DDDDDD;
+            color: #fff;
         }
         
         #apartmani h2 {
             font-size: 2.2em;
-            color: #DDDDDD;
+            color: #fff;
         }
         
         h2 {
@@ -195,15 +214,15 @@
         
         #apartmani p, #galerija p, #lokacija p, #kontakt p, footer p {
             font-family: 'Neuton', Helvetica;
-            color: #F5F5F5;
-            font-size: 1.3em;
+            color: #fff;
+            font-size: 1.5em;
             margin: 7px 0;
             text-align: center;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.84);
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
         }
         
         #galerija p, #lokacija p {
-            color: #5A5A5A;
+            color: #000;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.44);
         }
         
@@ -219,8 +238,12 @@
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.44);
         }
         
-        .siva {
+        .zelena {
             background-color: #4ea9b8;
+        }
+        
+        .plava {
+            background: #06425C!important;
         }
         
         .slike {
@@ -280,7 +303,6 @@
         
         #kontakt input:not(:nth-child(n+5)) {
             width: 45%;
-           
         }
         
         #kontakt a {
@@ -422,6 +444,7 @@
             .sendreset {
                 font-size: 1.1em;
                 padding: 12px 0px;
+                width: 100%;
             }
             #navrh {
                 opacity: 0.6;
@@ -862,13 +885,11 @@
         .delay {
             -webkit-transition-delay: 500ms;
             -o-transition-delay: 500ms;
-            transition-delay: 500ms; 
-
+            transition-delay: 500ms;
         }
-
+        
         .delay1 {
-                        -webkit-transition-delay: 800ms;
+            -webkit-transition-delay: 800ms;
             -o-transition-delay: 800ms;
-            transition-delay: 800ms; 
+            transition-delay: 800ms;
         }
-
