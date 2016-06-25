@@ -60,7 +60,7 @@
             width: 0%;
             transform: translateX(-50%);
             border-radius: 6px;
-            background: #1c1c38;
+            background: #06425C;
             opacity: 0;
             -moz-transition: all 400ms ease-out;
             -webkit-transition: all 400ms ease-out;
@@ -116,7 +116,7 @@
             -o-transition: background-color .7s ease, color .7s ease;
             transition: background-color .7s ease, color .7s ease;
             font-family: naslov, Arial;
-            color: #F5F5F5;
+            color: #fff;
             font-size: 1.2em;
             text-decoration: none;
             text-align: center;
@@ -126,7 +126,7 @@
         
         span {
             position: relative;
-            top: 11px;
+            top: 13px;
         }
         
         .nastavi:hover {
@@ -151,12 +151,12 @@
         
         nav li a {
             display: inline-block;
-            color: #F5F5F5;
+            color: #fff;
             text-align: right;
             padding: 14px 24px;
             text-decoration: none;
             margin: -2px;
-            border-left: 2px solid rgba(65, 170, 196, .55);
+            border-left: 2px solid #06425C;
             text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.54);
             -webkit-transition: color .7s ease;
             -o-transition: color .7s ease;
@@ -172,7 +172,11 @@
             border: none;
             text-align: right!important;
             padding: 0px;
-            background-color: rgba(90, 90, 90, .4);
+            background-color: rgba(95, 95, 95, 0.23);
+        }
+        
+        .shadowIspod {
+            box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.5);
         }
         
         nav li:before {
@@ -183,7 +187,7 @@
             left: -2px;
             height: 3px;
             width: 0px;
-            background: rgba(65, 170, 196, .55);
+            background: #06425C;
             -webkit-transition: width .25s 0.25s ease;
             -moz-transition: width .25s 0.25s ease;
             -ms-transition: width .25s 0.25s ease;
@@ -332,7 +336,7 @@
             -o-transition: background-color .7s ease, color .7s ease, opacity .7s ease-in;
             transition: background-color .7s ease, color .7s ease, opacity .7s ease-in;
             font-family: naslov, Arial;
-            color: #F5F5F5;
+            color: #fff;
             font-size: 1.4em;
             text-decoration: none;
             padding: 22px 42px;
@@ -342,7 +346,8 @@
         }
         
         .sendreset:hover {
-            background-color: #0396E0;;
+            background-color: #0396E0;
+            ;
             color: #fff;
         }
         
@@ -353,7 +358,7 @@
             display: block;
             background-color: #06425C;
             font-family: naslov, Arial;
-            color: #F5F5F5;
+            color: #fff;
             font-size: 1.em;
             text-decoration: none;
             padding: 31px 10px;
@@ -369,7 +374,7 @@
         }
         
         #navrh:hover {
-            background-color: #0396E0;;
+            background-color: #0396E0;
             color: #fff;
         }
         
@@ -431,11 +436,9 @@
             }
             #apartmani h1, #kontakt h1 {
                 font-size: 1.7em;
-                color: #DDDDDD;
             }
             #apartmani h2 {
                 font-size: 1.2em;
-                color: #DDDDDD;
             }
             .crta {
                 bottom: -15px;
@@ -897,4 +900,76 @@
             -webkit-transition-delay: 800ms;
             -o-transition-delay: 800ms;
             transition-delay: 800ms;
+        }
+        
+        #nav-icon3 {
+            width: 45px;
+            height: 45px;
+            position: relative;
+            right: 10px;
+            top: 5px;
+            float: right;
+            -webkit-transition: all .5s ease-in-out;
+            -o-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out;
+            -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        
+        #nav-icon3 span {
+            display: block;
+            position: absolute;
+            height: 4px;
+            width: 100%;
+            background: #fff;
+            border-radius: 7px;
+            opacity: 1;
+            left: 0;
+            -webkit-transition: all .25s ease-in-out;
+            -o-transition: all .25s ease-in-out;
+            transition: all .25s ease-in-out;
+            -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        
+        #nav-icon3 span:nth-child(1) {
+            top: 0px;
+        }
+        
+        #nav-icon3 span:nth-child(2), #nav-icon3 span:nth-child(3) {
+            top: 12px;
+        }
+        
+        #nav-icon3 span:nth-child(4) {
+            top: 24px;
+        }
+        
+        #nav-icon3.open span:nth-child(1) {
+            top: 18px;
+            width: 0%;
+            left: 50%;
+        }
+        
+        #nav-icon3.open span:nth-child(2) {
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        
+        #nav-icon3.open span:nth-child(3) {
+            -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+        
+        #nav-icon3.open span:nth-child(4) {
+            top: 18px;
+            width: 0%;
+            left: 50%;
         }

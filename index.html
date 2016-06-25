@@ -25,6 +25,7 @@
         width: 33px;
         position: relative;
         top: 5px;
+        right: 5px;
     }
     
     .material-icons {
@@ -53,8 +54,10 @@
             text-align: center;
             padding: 8px 52px;
             text-decoration: none;
-            border-bottom: 1px solid #C6C6C6;
+            border-top: 2px solid #06425C;
             margin: -2px;
+            font-size: 1.3em;
+            font-weight: bold;
         }
         li {
             float: left;
@@ -90,8 +93,8 @@
         }
         ul.topnav.responsive li:not(:first-child) a {
             position: relative;
-            top: 38px;
-            background-color: rgba(90, 90, 90, .6);
+            top: 42px;
+            background-color: rgba(95, 95, 95, 0.23);
         }
         /*------------------KRAJ STYLE ZA NAVIGACIJU I RESPOZIVNI BUTTON------------------*/
     </style>
@@ -199,7 +202,14 @@
     <nav>
         <ul class="topnav">
             <li class="icon">
-                <a href="javascript:void(0);" style="" onclick="button()"><img src="images/nav.png" /></a>
+                <a class="shadowIspod" href="javascript:void(0);" style="" onclick="button()">
+                    <div id="nav-icon3">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
             </li>
             <li><a class="pocetakLink" href="#gore">POČETAK</a></li>
             <li><a class="galerijaLink" href="#galerija">GALERIJA</a></li>

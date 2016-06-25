@@ -2,11 +2,19 @@
     function button() {
         document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
         $("nav").toggleClass('responsive');
+        $('.icon').children()[0].classList.toggle("shadowIspod");
+        $('.topnav li:last-child a').toggleClass('shadowIspod');
+        $('#nav-icon3').toggleClass('open');
+
+
     }
     $("section, header,footer").click(function() {
         if ($("nav").hasClass('responsive')) {
             document.getElementsByClassName("topnav")[0].classList.remove("responsive");
             $("nav").removeClass('responsive');
+            $('.icon').children()[0].classList.toggle("shadowIspod");
+            $('.topnav li:last-child a').toggleClass('shadowIspod');
+            $('#nav-icon3').toggleClass('open');
         }
 
     });
@@ -47,6 +55,8 @@
         $(this).next().toggle('blind');
 
     });
+
+
 
 
 
