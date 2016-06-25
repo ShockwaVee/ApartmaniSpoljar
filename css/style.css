@@ -19,8 +19,9 @@
         }
         
         header {
-            background: url(../images/pattern.png);
+            background: url(../images/bg11.jpg) no-repeat center center fixed;
             display: block;
+            background-size: cover;
         }
         
         #naslovi {
@@ -184,6 +185,8 @@
         #apartmani {
             display: inline-block;
             width: 100%;
+            background: url(../images/bg12.jpg) no-repeat center center fixed;
+            background-size: cover;
         }
         
         #apt4 p:last-child {
@@ -217,7 +220,7 @@
         }
         
         .siva {
-            background-color: #717D8C;
+            background-color: #4ea9b8;
         }
         
         .slike {
@@ -248,8 +251,8 @@
             width: 100%;
         }
         
-        .svijetloPlava {
-            background: #DDECEF;
+        .bijela {
+            background: #fff;
         }
         
         #lokacija iframe {
@@ -263,10 +266,6 @@
             padding-bottom: 100px;
             display: inline-block;
             width: 100%;
-        }
-        
-        .siva2 {
-            background: #F6F6F6;
         }
         
         .desno {
