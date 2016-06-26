@@ -221,7 +221,7 @@
             margin-bottom: 40px;
         }
         
-        #apartmani p, #galerija p, #lokacija p, #kontakt p, footer p {
+        #apartmani p, #galerija p, #lokacija p, #kontakt p, footer p, footer #jezici a {
             font-family: 'Neuton', Helvetica;
             color: #fff;
             font-size: 1.5em;
@@ -245,6 +245,16 @@
             top: 3px;
             color: #7D7D7D;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.44);
+        }
+        
+        footer #jezici a {
+            text-align: left;
+            position: relative;
+            top: 8px;
+            color: #7D7D7D;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.44);
+            text-decoration: none;
+            margin-left: 10px;
         }
         
         .zelena {
@@ -385,11 +395,12 @@
         #content {
             height: 45px;
             width: 100%;
-            background-color: #2F343A;
+            background-color: #232323;
             display: inline-block;
             position: absolute;
             bottom: 0;
         }
+        /*2F343A*/
         
         .fs-navigation {
             display: none;
@@ -500,6 +511,11 @@
             }
             nav li a {
                 padding: 14px 13px;
+            }
+            footer #jezici a{
+                font-size:1.1em;
+                margin-left:5px;
+                top:13px;
             }
         }
         
@@ -1041,7 +1057,7 @@
             -o-transition: all .2s ease-in-out;
             transition: all .2s ease-in-out;
         }
-
+        
         .slide {
             -webkit-transform: translateX(20px);
             -ms-transform: translateX(20px);
@@ -1050,7 +1066,6 @@
         }
         
         input:invalid {
-        
             box-shadow: none;
         }
         
@@ -1069,4 +1084,15 @@
         
         textarea:focus {
             border: 2px solid #0396E0;
+        }
+        
+        footer p {
+            display: inline;
+            position: relative;
+            top: -3px;
+        }
+        
+        footer img {
+            position: relative;
+            top: 5px;
         }
