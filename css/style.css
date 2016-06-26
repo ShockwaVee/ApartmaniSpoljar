@@ -901,8 +901,7 @@
             -o-transition-delay: 800ms;
             transition-delay: 800ms;
         }
-        
-       /* #nav-icon3 {
+        /* #nav-icon3 {
             -webkit-transition: all 500ms ease-in-out;
             -o-transition: all 500ms ease-in-out;
             transition: all 500ms ease-in-out;
@@ -980,9 +979,9 @@
             background-color: #fff;
             border-radius: 4px;
             position: absolute;
-            top:5px;
-            right:20px;
-            display:block;
+            top: 5px;
+            right: 20px;
+            display: block;
             -webkit-transition: all .3s ease-in;
             -ms-transition: all .3s ease-in;
             -o-transition: all .3s ease-in;
@@ -1017,4 +1016,57 @@
             -ms-transform: rotate(-45deg);
             -o-transform: rotate(-45deg);
             transform: rotate(-45deg);
+        }
+        
+        input:not(.sendreset) {
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid #06425C;
+            -webkit-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+            font-family: 'Neuton', Helvetica;
+            color: #fff;
+            font-size: 1.5em;
+            margin: 7px 0;
+            text-align: left;
+        }
+        
+        input:focus {
+            border-bottom: 2px solid #0396E0;
+        }
+        
+        #kontakt p {
+            -webkit-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+        }
+
+        .slide {
+            -webkit-transform: translateX(20px);
+            -ms-transform: translateX(20px);
+            -o-transform: translateX(20px);
+            transform: translateX(20px);
+        }
+        
+        input:invalid {
+            border: 2px solid red;
+            box-shadow: none;
+        }
+        
+        textarea {
+            background: transparent;
+            -webkit-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+            border: 2px solid #06425C;
+            font-family: 'Neuton', Helvetica;
+            color: #fff;
+            font-size: 1.5em;
+            margin: 7px 0;
+            text-align: left;
+        }
+        
+        textarea:focus {
+            border: 2px solid #0396E0;
         }

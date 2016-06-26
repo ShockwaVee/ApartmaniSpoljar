@@ -20,6 +20,12 @@
     });
 
 
+    $('input, textarea').focusin(function() {
+        $(this).prev().addClass('slide');
+    });
+    $('input, textarea').focusout(function() {
+        $(this).prev().removeClass('slide');
+    });
 
 
 
