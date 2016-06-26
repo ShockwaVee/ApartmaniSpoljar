@@ -1,3 +1,10 @@
+        /*----------------------GENERAL-----------------------------*/
+        
+        @font-face {
+            font-family: naslov;
+            src: url(../fonts/Biko_Regular.otf);
+        }
+        
         body {
             margin: 0;
             padding: 0;
@@ -24,54 +31,28 @@
             background-size: cover;
         }
         
-        @font-face {
-            font-family: naslov;
-            src: url(../fonts/Biko_Regular.otf);
-        }
-        /* header:before {
-            content: "";
-            display: inline-block;
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100vh;
-            z-index: -100;
-            background: url(../images/bg11.jpg) no-repeat center center;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }*/
-        
-        #naslovi {
-            margin: 0 auto;
-            padding-top: 200px;
-            padding-bottom: 200px;
+        .lijevo {
+            text-align: left!important;
         }
         
-        .crta {
-            content: "";
-            display: block;
-            position: relative;
-            bottom: -26px;
-            left: 50%;
-            height: 3px;
-            width: 0%;
-            transform: translateX(-50%);
-            border-radius: 6px;
-            background: #06425C;
-            opacity: 0;
-            -moz-transition: all 400ms ease-out;
-            -webkit-transition: all 400ms ease-out;
-            -o-transition: all 400ms ease-out;
-            transition: all 400ms ease-out;
+        .bijela {
+            background: #fff;
         }
         
-        .crta.in-view {
-            opacity: 1;
-            width: 100%;
+        .desno {
+            float: right!important;
         }
+        
+        .zelena {
+            background-color: #4ea9b8;
+        }
+        
+        .plava {
+            background: #06425C!important;
+        }
+        /*----------------------KRAJ GENERAL-----------------------------*/
+        /*----------------------------------------------------------------------*/
+        /*----------------------TEKST-----------------------------*/
         
         #naslovi h1, #apartmani h1, #apartmani h2, #galerija h1, #lokacija h1, #kontakt h1 {
             font-family: naslov, Arial;
@@ -85,10 +66,6 @@
             color: #fff;
         }
         
-        #naslovi .animation-element:first-child h1 {
-            margin: 0;
-        }
-        
         #apartmani h1, #kontakt h1 {
             font-size: 3.6em;
             color: #fff;
@@ -99,40 +76,44 @@
             color: #fff;
         }
         
-        h2 {
-            cursor: pointer;
-            text-decoration: underline;
-        }
-        
-        .nastavi {
-            display: block;
-            margin: 0 auto;
-            margin-top: 100px;
-            background-color: #06425C;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-            -webkit-transition: background-color .7s ease, color .7s ease;
-            -o-transition: background-color .7s ease, color .7s ease;
-            transition: background-color .7s ease, color .7s ease;
-            font-family: naslov, Arial;
+        #apartmani p, #galerija p, #lokacija p, #kontakt p, footer p, footer #jezici a {
+            font-family: 'Neuton', Helvetica;
             color: #fff;
-            font-size: 1.2em;
-            text-decoration: none;
+            font-size: 1.5em;
+            margin: 7px 0;
             text-align: center;
-            width: 150px;
-            height: 50px;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
         }
         
-        span {
+        #galerija p, #lokacija p {
+            color: #000;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.44);
+        }
+        
+        #apartmani p:last-child {
+            font-size: 1.4em;
+        }
+        
+        footer p {
+            text-align: left;
             position: relative;
-            top: 13px;
+            top: 3px;
+            color: #7D7D7D;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.44);
         }
         
-        .nastavi:hover {
-            background-color: #0396E0;
-            color: #fff;
+        footer #jezici a {
+            text-align: left;
+            position: relative;
+            top: 8px;
+            color: #7D7D7D;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.44);
+            text-decoration: none;
+            margin-left: 10px;
         }
+        /*----------------------KRAJ TEKST-----------------------------*/
+        /*----------------------------------------------------------------------*/
+        /*-------------------------NAVIGACIJA------------------------*/
         
         nav ul {
             list-style-type: none;
@@ -209,83 +190,129 @@
             z-index: 100;
             right: 0;
         }
+        /*2-----------------------ANIMIRANI NAV BUTTON----------------------*/
         
-        #apartmani {
-            display: inline-block;
+        #navbutton span {
+            width: 45px;
+            height: 5px;
+            background-color: #fff;
+            border-radius: 4px;
+            position: absolute;
+            top: 5px;
+            right: 20px;
+            display: block;
+            -webkit-transition: all .3s ease-in;
+            -ms-transition: all .3s ease-in;
+            -o-transition: all .3s ease-in;
+            transition: all .3s ease-in;
+        }
+        
+        #navbutton span:nth-child(1) {
+            top: 5px;
+        }
+        
+        #navbutton span:nth-child(2), #navbutton span:nth-child(3) {
+            top: 17px;
+        }
+        
+        #navbutton span:nth-child(4) {
+            top: 29px;
+        }
+        
+        #navbutton.animate span:nth-child(1), #navbutton.animate span:nth-child(4) {
+            width: 0%;
+        }
+        
+        #navbutton.animate span:nth-child(2) {
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        
+        #navbutton.animate span:nth-child(3) {
+            -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+        /*2-----------------------KRAJ ANIMIRANI NAV BUTTON----------------------*/
+        /*----------------------------------------------------------*/
+        /*----------------------------KRAJ NAVIGACIJA-----------------*/
+        /*------------------------------------------------------------*/
+        /*----------------------HEADER----------------------------------*/
+        
+        #naslovi {
+            margin: 0 auto;
+            padding-top: 200px;
+            padding-bottom: 200px;
+        }
+        
+        #naslovi .animation-element:first-child h1 {
+            margin: 0;
+        }
+        
+        h2 {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        
+        .crta {
+            content: "";
+            display: block;
+            position: relative;
+            bottom: -26px;
+            left: 50%;
+            height: 3px;
+            width: 0%;
+            transform: translateX(-50%);
+            border-radius: 6px;
+            background: #06425C;
+            opacity: 0;
+            -moz-transition: all 400ms ease-out;
+            -webkit-transition: all 400ms ease-out;
+            -o-transition: all 400ms ease-out;
+            transition: all 400ms ease-out;
+        }
+        
+        .crta.in-view {
+            opacity: 1;
             width: 100%;
-            background: url(../images/bg12.jpg) no-repeat center center fixed;
-            background-size: cover;
         }
         
-        #apt4 p:last-child {
-            margin-bottom: 40px;
-        }
-        
-        #apartmani p, #galerija p, #lokacija p, #kontakt p, footer p, footer #jezici a {
-            font-family: 'Neuton', Helvetica;
+        .nastavi {
+            /*BUTTON*/
+            display: block;
+            margin: 0 auto;
+            margin-top: 100px;
+            background-color: #06425C;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            -webkit-transition: background-color .7s ease, color .7s ease;
+            -o-transition: background-color .7s ease, color .7s ease;
+            transition: background-color .7s ease, color .7s ease;
+            font-family: naslov, Arial;
             color: #fff;
-            font-size: 1.5em;
-            margin: 7px 0;
-            text-align: center;
-            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
-        }
-        
-        #galerija p, #lokacija p {
-            color: #000;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.44);
-        }
-        
-        #apartmani p:last-child {
-            font-size: 1.4em;
-        }
-        
-        footer p {
-            text-align: left;
-            position: relative;
-            top: 3px;
-            color: #7D7D7D;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.44);
-        }
-        
-        footer #jezici a {
-            text-align: left;
-            position: relative;
-            top: 8px;
-            color: #7D7D7D;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.44);
+            font-size: 1.2em;
             text-decoration: none;
-            margin-left: 10px;
+            text-align: center;
+            width: 150px;
+            height: 50px;
         }
         
-        .zelena {
-            background-color: #4ea9b8;
+        .nastavi:hover {
+            background-color: #0396E0;
+            color: #fff;
         }
         
-        .plava {
-            background: #06425C!important;
+        span {
+            position: relative;
+            top: 13px;
         }
-        
-        .slike {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        
-        .onpage {
-            width: 400px;
-            margin-bottom: 15px;
-            border: 4px solid #DDDDDD;
-            box-shadow: 0px 3px 5px #000;
-        }
-        
-        #apt1, #apt2, #apt3 {
-            padding-bottom: 25px;
-            border-bottom: 2px solid rgba(47, 52, 58, 0.3);
-        }
-        
-        .lijevo {
-            text-align: left!important;
-        }
+        /*----------------------------KRAJ HEADER-----------------*/
+        /*------------------------------------------------------------*/
+        /*----------------------GALERIJA----------------------------------*/
         
         #galerija {
             padding-bottom: 100px;
@@ -293,236 +320,8 @@
             width: 100%;
         }
         
-        .bijela {
-            background: #fff;
-        }
-        
-        #lokacija iframe {
-            width: 100%;
-            height: 400px;
-            margin: 0px auto;
-            display: block;
-        }
-        
-        #lokacija {
-            padding-bottom: 100px;
-            display: inline-block;
-            width: 100%;
-        }
-        
-        .desno {
-            float: right!important;
-        }
-        
-        #kontakt {
-            padding-bottom: 50px;
-            display: inline-block;
-            width: 100%;
-        }
-        
-        #kontakt input:not(:nth-child(n+5)) {
-            width: 45%;
-        }
-        
-        #kontakt a {
-            color: #F5F5F5;
-        }
-        
-        #poruka {
-            resize: none;
-            width: 99.5%;
-            height: 300px;
-        }
-        
-        .sendreset {
-            float: left;
-            margin-top: 10px;
-            margin-bottom: 20px;
-            background-color: #06425C;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-            -webkit-transition: background-color .7s ease, color .7s ease, opacity .7s ease-in;
-            -o-transition: background-color .7s ease, color .7s ease, opacity .7s ease-in;
-            transition: background-color .7s ease, color .7s ease, opacity .7s ease-in;
-            font-family: naslov, Arial;
-            color: #fff;
-            font-size: 1.4em;
-            text-decoration: none;
-            padding: 22px 42px;
-            display: block;
-            letter-spacing: 1.2px;
-            width: 40%;
-        }
-        
-        .sendreset:hover {
-            background-color: #0396E0;
-            ;
-            color: #fff;
-        }
-        
-        #navrh {
-            position: fixed;
-            bottom: 6%;
-            right: 2%;
-            display: block;
-            background-color: #06425C;
-            font-family: naslov, Arial;
-            color: #fff;
-            font-size: 1.em;
-            text-decoration: none;
-            padding: 31px 10px;
-            display: block;
-            letter-spacing: 1.2px;
-            -webkit-transition: all.7s ease;
-            -o-transition: all .7s ease;
-            transition: all .7s ease;
-            border-radius: 70%;
-            border: none;
-            cursor: pointer;
-            z-index: 101;
-        }
-        
-        #navrh:hover {
-            background-color: #0396E0;
-            color: #fff;
-        }
-        
-        footer {
-            position: relative;
-        }
-        
-        #content {
-            height: 45px;
-            width: 100%;
-            background-color: #232323;
-            display: inline-block;
-            position: absolute;
-            bottom: 0;
-        }
-        /*2F343A*/
-        
         .fs-navigation {
             display: none;
-        }
-        
-        @media screen and (max-width:1775px) and (min-width:1621px) {
-            .onpage {
-                width: 365px;
-            }
-        }
-        
-        @media screen and (max-width:1620px) and (min-width:1382px) {
-            .container {
-                width: 90%;
-            }
-        }
-        
-        @media screen and (max-width:1381px) and (min-width:1185px) {
-            .onpage {
-                width: 400px;
-            }
-            #naslovi h1, #apartmani h1, #apartmani h2, #galerija h1, #lokacija h1, #kontakt h1 {
-                font-size: 3.5em;
-            }
-            #apartmani h1, #kontakt h1 {
-                font-size: 2.7em;
-                color: #DDDDDD;
-            }
-            #apartmani h2 {
-                font-size: 1.3em;
-                color: #DDDDDD;
-            }
-            .crta {
-                bottom: -20px;
-            }
-        }
-        
-        @media screen and (max-width:1184px) {
-            .onpage {
-                width: 325px;
-            }
-            #naslovi h1, #apartmani h1, #apartmani h2, #galerija h1, #lokacija h1, #kontakt h1 {
-                font-size: 2.5em;
-            }
-            #apartmani h1, #kontakt h1 {
-                font-size: 1.7em;
-            }
-            #apartmani h2 {
-                font-size: 1.2em;
-            }
-            .crta {
-                bottom: -15px;
-            }
-            #apartmani p, #galerija p, #lokacija p, #kontakt p {
-                font-size: 1.1em;
-            }
-            #kontakt input:not(:nth-child(n+5)) {
-                width: 99.5%;
-            }
-            .sendreset {
-                font-size: 1.1em;
-                padding: 12px 0px;
-                width: 100%;
-            }
-            #navrh {
-                opacity: 0.6;
-            }
-            #navrh:hover {
-                opacity: 1;
-            }
-            .fs-navigation {
-                display: block;
-            }
-            .fs-block:nth-child(1), .fs-block:nth-child(3) {
-                visibility: hidden;
-            }
-            .fs-block:nth-child(2) {
-                width: 140%;
-                left: -17%;
-            }
-        }
-        
-        @media screen and (max-width:980px) {
-            .slike {
-                -webkit-justify-content: center;
-                justify-content: center;
-            }
-            .onpage {
-                width: 400px;
-            }
-            nav ul li {
-                font-size: 1.1em;
-            }
-            nav li a {
-                padding: 14px 17px;
-            }
-        }
-        
-        @media screen and (max-width:688px) {
-            #naslovi h1, #apartmani h1, #apartmani h2, #galerija h1, #lokacija h1, #kontakt h1 {
-                font-size: 1.7em;
-            }
-            .crta {
-                bottom: -10px;
-            }
-            nav ul li {
-                font-size: 0.98em;
-            }
-            nav li a {
-                padding: 14px 13px;
-            }
-            footer #jezici a {
-                font-size: 1.1em;
-                margin-left: 5px;
-                top: 13px;
-            }
-        }
-        
-        @media screen and (max-width:600px) {
-            #navrh {
-                display: none;
-            }
         }
         
         .fs-container {
@@ -832,6 +631,340 @@
                 font-size: 13px;
             }
         }
+        /*------------------KRAJ GALERIJA--------------------------------*/
+        /*------------------------------------------------------------*/
+        /*----------------------APARTMANI----------------------------------*/
+        
+        #apartmani {
+            display: inline-block;
+            width: 100%;
+            background: url(../images/bg12.jpg) no-repeat center center fixed;
+            background-size: cover;
+        }
+        
+        #apt4 p:last-child {
+            margin-bottom: 40px;
+        }
+        
+        .slike {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .onpage {
+            width: 400px;
+            margin-bottom: 15px;
+            border: 4px solid #DDDDDD;
+            box-shadow: 0px 3px 5px #000;
+        }
+        
+        #apt1, #apt2, #apt3 {
+            padding-bottom: 25px;
+            border-bottom: 2px solid rgba(47, 52, 58, 0.3);
+        }
+        /*----------------------------KRAJ APARTMANI-----------------*/
+        /*------------------------------------------------------------*/
+        /*----------------------LOKACIJA----------------------------------*/
+        
+        #lokacija iframe {
+            width: 100%;
+            height: 400px;
+            margin: 0px auto;
+            display: block;
+        }
+        
+        #lokacija {
+            padding-bottom: 100px;
+            display: inline-block;
+            width: 100%;
+        }
+        /*--------------------KRAJ LOKACIJA--------------------------------------*/
+        /*------------------------------------------------------------*/
+        /*----------------------------KONTAKT-----------------*/
+        
+        #kontakt {
+            padding-bottom: 50px;
+            display: inline-block;
+            width: 100%;
+        }
+        
+        #kontakt input:not(:nth-child(n+5)) {
+            width: 45%;
+        }
+        
+        #kontakt a {
+            color: #F5F5F5;
+        }
+        
+        #poruka {
+            /*TEXTAREA*/
+            resize: none;
+            width: 99.5%;
+            height: 300px;
+        }
+        
+        .sendreset {
+            /*BUTTONI*/
+            float: left;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            background-color: #06425C;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            -webkit-transition: background-color .7s ease, color .7s ease, opacity .7s ease-in;
+            -o-transition: background-color .7s ease, color .7s ease, opacity .7s ease-in;
+            transition: background-color .7s ease, color .7s ease, opacity .7s ease-in;
+            font-family: naslov, Arial;
+            color: #fff;
+            font-size: 1.4em;
+            text-decoration: none;
+            padding: 22px 42px;
+            display: block;
+            letter-spacing: 1.2px;
+            width: 40%;
+        }
+        
+        .sendreset:hover {
+            background-color: #0396E0;
+            ;
+            color: #fff;
+        }
+        
+        input:invalid {
+            box-shadow: none;
+        }
+        
+        textarea {
+            background: transparent;
+            -webkit-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+            border: 2px solid #06425C;
+            font-family: 'Neuton', Helvetica;
+            color: #fff;
+            font-size: 1.5em;
+            margin: 7px 0;
+            text-align: left;
+        }
+        
+        textarea:focus {
+            border: 2px solid #0396E0;
+        }
+        
+        input:not(.sendreset) {
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid #06425C;
+            -webkit-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+            font-family: 'Neuton', Helvetica;
+            color: #fff;
+            font-size: 1.5em;
+            margin: 7px 0;
+            text-align: left;
+        }
+        
+        input:focus {
+            border-bottom: 2px solid #0396E0;
+        }
+        /*-----------------------------KRAJ KONTAKT----------------------------*/
+        /*------------------------------------------------------------*/
+        /*--------------------FOOTER--------------------------------------*/
+        
+        footer {
+            position: relative;
+        }
+        
+        #content {
+            height: 45px;
+            width: 100%;
+            background-color: #232323;
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+        }
+        
+        footer p {
+            display: inline;
+            position: relative;
+            top: -3px;
+        }
+        
+        footer img {
+            position: relative;
+            top: 5px;
+        }
+        /*-------------------KRAJ FOOTER--------------------------------------*/
+        /*------------------------------------------------------------*/
+        /*--------------------BUTTON NA VRH--------------------------------------*/
+        
+        #navrh {
+            position: fixed;
+            bottom: 6%;
+            right: 2%;
+            display: block;
+            background-color: #06425C;
+            font-family: naslov, Arial;
+            color: #fff;
+            font-size: 1.em;
+            text-decoration: none;
+            padding: 31px 10px;
+            display: block;
+            letter-spacing: 1.2px;
+            -webkit-transition: all.7s ease;
+            -o-transition: all .7s ease;
+            transition: all .7s ease;
+            border-radius: 70%;
+            border: none;
+            cursor: pointer;
+            z-index: 101;
+        }
+        
+        #navrh:hover {
+            background-color: #0396E0;
+            color: #fff;
+        }
+        /*-----------------------------KRAJ BUTTON NA VRH----------------------------*/
+        /*------------------------------------------------------------*/
+        /*---------------------------MEDIA QUERYIJI----------------*/
+        /*------------------------------------------------------------*/
+        /*2------------------------UPDATE SLIKA ZA MANJE REZE (ONPAGE)---------------------------*/
+        
+        @media screen and (max-width:1775px) and (min-width:1621px) {
+            .onpage {
+                width: 365px;
+            }
+        }
+        /*2------------------------KRAJ UPDATE SLIKA ZA MANJE REZE (ONPAGE)---------------------------*/
+        /*------------------------------------------------------------*/
+        /*2------------------------POVECAN GLOBALNI CONTAINER DA ZAUZME VISE PROSTORA NA MANJIM REZ-------*/
+        
+        @media screen and (max-width:1620px) and (min-width:1382px) {
+            .container {
+                width: 90%;
+            }
+        }
+        /*2---------------KRAJ POVECAN GLOBALNI CONTAINER DA ZAUZME VISE PROSTORA NA MANJIM REZ-----*/
+        /*------------------------------------------------------------*/
+        /*2------------------------TINKERING ZA SVE ELEMENTE NA RAZLICITIM MANJIM REZ------------------*/
+        
+        @media screen and (max-width:1381px) and (min-width:1185px) {
+            .onpage {
+                width: 400px;
+            }
+            #naslovi h1, #apartmani h1, #apartmani h2, #galerija h1, #lokacija h1, #kontakt h1 {
+                font-size: 3.5em;
+            }
+            #apartmani h1, #kontakt h1 {
+                font-size: 2.7em;
+                color: #DDDDDD;
+            }
+            #apartmani h2 {
+                font-size: 1.3em;
+                color: #DDDDDD;
+            }
+            .crta {
+                bottom: -20px;
+            }
+        }
+        
+        @media screen and (max-width:1184px) {
+            .onpage {
+                width: 325px;
+            }
+            #naslovi h1, #apartmani h1, #apartmani h2, #galerija h1, #lokacija h1, #kontakt h1 {
+                font-size: 2.5em;
+            }
+            #apartmani h1, #kontakt h1 {
+                font-size: 1.7em;
+            }
+            #apartmani h2 {
+                font-size: 1.2em;
+            }
+            .crta {
+                bottom: -15px;
+            }
+            #apartmani p, #galerija p, #lokacija p, #kontakt p {
+                font-size: 1.1em;
+            }
+            #kontakt input:not(:nth-child(n+5)) {
+                width: 99.5%;
+            }
+            .sendreset {
+                font-size: 1.1em;
+                padding: 12px 0px;
+                width: 100%;
+            }
+            #navrh {
+                opacity: 0.6;
+            }
+            #navrh:hover {
+                opacity: 1;
+            }
+            .fs-navigation {
+                display: block;
+            }
+            .fs-block:nth-child(1), .fs-block:nth-child(3) {
+                visibility: hidden;
+            }
+            .fs-block:nth-child(2) {
+                width: 140%;
+                left: -17%;
+            }
+        }
+        
+        @media screen and (max-width:980px) {
+            .slike {
+                -webkit-justify-content: center;
+                justify-content: center;
+            }
+            .onpage {
+                width: 400px;
+            }
+            nav ul li {
+                font-size: 1.1em;
+            }
+            nav li a {
+                padding: 14px 17px;
+            }
+        }
+        
+        @media screen and (max-width:688px) {
+            #naslovi h1, #apartmani h1, #apartmani h2, #galerija h1, #lokacija h1, #kontakt h1 {
+                font-size: 1.7em;
+            }
+            .crta {
+                bottom: -10px;
+            }
+            nav ul li {
+                font-size: 0.98em;
+            }
+            nav li a {
+                padding: 14px 13px;
+            }
+            footer #jezici a {
+                font-size: 1.1em;
+                margin-left: 5px;
+                top: 13px;
+            }
+        }
+        /*2------------------------KRAJ TINKERING ZA SVE ELEMENTE NA RAZLICITIM MANJIM REZ------------------*/
+        /*-------------------------------------------------------------*/
+        /*2------------------------MAKNUT NA VRH BUTTON NA MALIM REZ------------------*/
+        
+        @media screen and (max-width:600px) {
+            #navrh {
+                display: none;
+            }
+        }
+        /*2------------------------KRAJ MAKNUT NA VRH BUTTON NA MALIM REZ------------------*/
+        /*-------------------------------------------------------------*/
+        /*--------------------------KRAJ MEDIA QUERIJI-----------------------------------*/
+        /*-------------------------------------------------------------*/
+        /*---------------------------ANIMACIJE ZA JQUERY----------------------------------*/
         
         .bounce-down {
             opacity: 0;
@@ -917,146 +1050,6 @@
             -o-transition-delay: 800ms;
             transition-delay: 800ms;
         }
-        /* #nav-icon3 {
-            -webkit-transition: all 500ms ease-in-out;
-            -o-transition: all 500ms ease-in-out;
-            transition: all 500ms ease-in-out;
-            -webkit-transform: rotate(0deg);
-            -ms-transform: rotate(0deg);
-            -o-transform: rotate(0deg);
-            transform: rotate(0deg);
-            width: 45px;
-            height: 45px;
-            position: relative;
-            right: 10px;
-            top: 5px;
-            float: right;
-        }
-        
-        #nav-icon3 span {
-            -webkit-transition: all 250ms ease-in-out;
-            -o-transition: all 250ms ease-in-out;
-            transition: all 250ms ease-in-out;
-            -webkit-transform: rotate(0deg);
-            -ms-transform: rotate(0deg);
-            -o-transform: rotate(0deg);
-            transform: rotate(0deg);
-            display: block;
-            position: absolute;
-            height: 4px;
-            width: 100%;
-            background: #fff;
-            border-radius: 7px;
-            opacity: 1;
-            left: 0;
-        }
-        
-        #nav-icon3 span:nth-child(1) {
-            top: 0px;
-        }
-        
-        #nav-icon3 span:nth-child(2), #nav-icon3 span:nth-child(3) {
-            top: 12px;
-        }
-        
-        #nav-icon3 span:nth-child(4) {
-            top: 24px;
-        }
-        
-        #nav-icon3.open span:nth-child(1) {
-            top: 18px;
-            width: 0%;
-            left: 50%;
-        }
-        
-        #nav-icon3.open span:nth-child(2) {
-            -webkit-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            -o-transform: rotate(45deg);
-            transform: rotate(45deg);
-        }
-        
-        #nav-icon3.open span:nth-child(3) {
-            -webkit-transform: rotate(-45deg);
-            -ms-transform: rotate(-45deg);
-            -o-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-        }
-        
-        #nav-icon3.open span:nth-child(4) {
-            top: 18px;
-            width: 0%;
-            left: 50%;
-        }*/
-        
-        #navbutton span {
-            width: 45px;
-            height: 5px;
-            background-color: #fff;
-            border-radius: 4px;
-            position: absolute;
-            top: 5px;
-            right: 20px;
-            display: block;
-            -webkit-transition: all .3s ease-in;
-            -ms-transition: all .3s ease-in;
-            -o-transition: all .3s ease-in;
-            transition: all .3s ease-in;
-        }
-        
-        #navbutton span:nth-child(1) {
-            top: 5px;
-        }
-        
-        #navbutton span:nth-child(2), #navbutton span:nth-child(3) {
-            top: 17px;
-        }
-        
-        #navbutton span:nth-child(4) {
-            top: 29px;
-        }
-        
-        #navbutton.animate span:nth-child(1), #navbutton.animate span:nth-child(4) {
-            width: 0%;
-        }
-        
-        #navbutton.animate span:nth-child(2) {
-            -webkit-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            -o-transform: rotate(45deg);
-            transform: rotate(45deg);
-        }
-        
-        #navbutton.animate span:nth-child(3) {
-            -webkit-transform: rotate(-45deg);
-            -ms-transform: rotate(-45deg);
-            -o-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-        }
-        
-        input:not(.sendreset) {
-            background: transparent;
-            border: none;
-            border-bottom: 2px solid #06425C;
-            -webkit-transition: all .2s ease-in-out;
-            -o-transition: all .2s ease-in-out;
-            transition: all .2s ease-in-out;
-            font-family: 'Neuton', Helvetica;
-            color: #fff;
-            font-size: 1.5em;
-            margin: 7px 0;
-            text-align: left;
-        }
-        
-        input:focus {
-            border-bottom: 2px solid #0396E0;
-        }
-        
-        #kontakt p {
-            -webkit-transition: all .2s ease-in-out;
-            -o-transition: all .2s ease-in-out;
-            transition: all .2s ease-in-out;
-        }
         
         .slide {
             -webkit-transform: translateX(20px);
@@ -1065,35 +1058,9 @@
             transform: translateX(20px);
         }
         
-        input:invalid {
-            box-shadow: none;
-        }
-        
-        textarea {
-            background: transparent;
+        #kontakt p {
             -webkit-transition: all .2s ease-in-out;
             -o-transition: all .2s ease-in-out;
             transition: all .2s ease-in-out;
-            border: 2px solid #06425C;
-            font-family: 'Neuton', Helvetica;
-            color: #fff;
-            font-size: 1.5em;
-            margin: 7px 0;
-            text-align: left;
         }
-        
-        textarea:focus {
-            border: 2px solid #0396E0;
-        }
-        
-        footer p {
-            display: inline;
-            position: relative;
-            top: -3px;
-        }
-        
-        footer img {
-            position: relative;
-            top: 5px;
-        }
-        
+        /*---------------------------KRAJ ANIMACIJE ZA JQUERY----------------------------------*/
