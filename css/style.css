@@ -341,7 +341,6 @@
             content: '';
             position: absolute;
             bottom: -40px;
-            background: transparent url(../images/shadow.png) no-repeat center center;
             height: 90px;
             width: 90%;
             left: 5%;
