@@ -72,20 +72,13 @@
             position: relative;
             margin: 0;
         }
-        ul.topnav.responsive li.icon {}
-        ul.topnav.responsive li {
+        ul.topnav.responsive li:not(:nth-child(1)) {
             float: none;
             display: inline;
         }
         ul.topnav.responsive li a {
             display: block;
             text-align: left;
-        }
-        ul.topnav.responsive .material-icons {
-            display: block;
-            float: left;
-            position: relative;
-            top: 18px;
         }
         nav.responsive {
             width: 100%;
@@ -202,8 +195,8 @@
     <nav>
         <ul class="topnav">
             <li class="icon">
-                <a class="shadowIspod" href="javascript:void(0);" style="" onclick="button()">
-                    <div id="nav-icon3">
+                <a class="shadowIspod" id="navigacija">
+                    <div id="navbutton">
                         <span></span>
                         <span></span>
                         <span></span>

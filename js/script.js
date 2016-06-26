@@ -1,23 +1,28 @@
     /*-----------------------------BUTTON ZA RESPONSIVE------------------*/
-    function button() {
-        document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
+    $('#navigacija').click(function() {
+        $('#navbutton').toggleClass('animate');
         $("nav").toggleClass('responsive');
         $('.icon').children()[0].classList.toggle("shadowIspod");
         $('.topnav li:last-child a').toggleClass('shadowIspod');
-        $('#nav-icon3').toggleClass('open');
+        $(".topnav").toggleClass('responsive');
 
-
-    }
+    });
     $("section, header,footer").click(function() {
         if ($("nav").hasClass('responsive')) {
             document.getElementsByClassName("topnav")[0].classList.remove("responsive");
             $("nav").removeClass('responsive');
             $('.icon').children()[0].classList.toggle("shadowIspod");
             $('.topnav li:last-child a').toggleClass('shadowIspod');
-            $('#nav-icon3').toggleClass('open');
+            $('#navbutton').toggleClass('animate');
+
         }
 
     });
+
+
+
+
+
     /*---------------------------KRAJ BUTTON ZA RESPONSIVE----------------*/
 
     $('.pocetakLink').click(function() {
