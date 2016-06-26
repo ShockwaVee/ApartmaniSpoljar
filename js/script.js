@@ -7,6 +7,13 @@
         $(".topnav").toggleClass('responsive');
 
     });
+
+    $(window).resize(function() {
+        if (($(this).width() > 560) && ($('.topnav li:last-child a').hasClass('shadowIspod'))) {
+            $('.icon').children()[0].classList.toggle("shadowIspod");
+            $('.topnav li:last-child a').toggleClass('shadowIspod');
+        }
+    });
     $("section, header,footer").click(function() {
         if ($("nav").hasClass('responsive')) {
             document.getElementsByClassName("topnav")[0].classList.remove("responsive");
