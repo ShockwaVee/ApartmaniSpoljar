@@ -152,6 +152,20 @@
         })(navigator.userAgent || navigator.vendor || window.opera);
         return check;
     }
+
+
     if (window.mobilecheck() == true) {
         $('#apartmani').addClass('plava');
     }
+
+
+    /* $(document).ready(function() {
+         $("#dialog-message").dialog({
+             modal: true,
+             buttons: {
+                 Ok: function() {
+                     $(this).dialog("close");
+                 }
+             }
+         });
+     });*/
