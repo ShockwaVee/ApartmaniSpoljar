@@ -8,12 +8,20 @@
 
     });
 
+    /*---------------------------KRAJ BUTTON ZA RESPONSIVE----------------*/
+    /*------------------------------------------------------------------*/
+    /*-----------------------------MAKIVANJE SHADOWA NA RESIZE------------------*/
+
     $(window).resize(function() {
         if (($(this).width() > 560) && ($('.topnav li:last-child a').hasClass('shadowIspod'))) {
             $('.icon').children()[0].classList.toggle("shadowIspod");
             $('.topnav li:last-child a').toggleClass('shadowIspod');
         }
     });
+    /*-----------------------------KRAJ MAKIVANJE SHADOWA NA RESIZE------------------*/
+    /*------------------------------------------------------------------*/
+    /*---------------------------MAKIVANJE KLASE DA SE MORE KLIKNUT BILOGDE----------------*/
+
     $("section, header,footer").click(function() {
         if ($("nav").hasClass('responsive')) {
             document.getElementsByClassName("topnav")[0].classList.remove("responsive");
@@ -25,19 +33,21 @@
         }
 
     });
-
-
+    /*-----------------------------KRAJ MAKIVANJE SHADOWA NA RESIZE------------------*/
+    /*------------------------------------------------------------------*/
     $('input, textarea').focusin(function() {
         $(this).prev().addClass('slide');
     });
     $('input, textarea').focusout(function() {
         $(this).prev().removeClass('slide');
     });
+    $(function() {
 
+        $('#fs-slider').imgslider();
 
-
-    /*---------------------------KRAJ BUTTON ZA RESPONSIVE----------------*/
-
+    });
+    /*------------------------------------------------------------------*/
+    /*---------------------------SLOW SCROLL--------------------------------------*/
     $('.pocetakLink').click(function() {
         $('html, body').animate({
             scrollTop: $($.attr(this, 'href')).offset().top
@@ -73,24 +83,9 @@
         $(this).next().toggle('blind');
 
     });
-
-
-
-
-
-    /*function bindEvent(element, eventName, eventHandler) {
-        var el = $(element)[0];
-        if (el.addEventListener) {
-            el.addEventListener(eventName, eventHandler, false)
-        } else if (el.attachEvent) {
-            el.attachEvent('on' + eventName, eventHandler);
-        }
-    }
-    bindEvent('#headapt1', 'click', function() {
-        $('#apt1').toggle('blind');
-
-
-    });*/
+    /*---------------------------KRAJ SLOW SCROLL--------------------------------------*/
+    /*------------------------------------------------------------------*/
+    /*-----------------------------SCROLL BASED ANIMATION- SVAKI PUT------------------*/
 
 
     var $animation_elements = $('.animation-element');
@@ -116,10 +111,11 @@
             }
         });
     }
-
     $window.on('scroll resize', check_if_in_view);
     $window.trigger('scroll');
-
+    /*-----------------------------KRAJ SCROLL BASED ANIMATION- SVAKI PUT------------------*/
+    /*------------------------------------------------------------------*/
+    /*-----------------------------SCROLL BASED ANIMATION- JEDNOM------------------*/
     var $animation_elements_once = $('.animation-once');
 
     function check_if_in_view_once() {
@@ -141,10 +137,11 @@
             }
         });
     }
-
     $window.on('scroll resize', check_if_in_view_once);
     $window.trigger('scroll');
-
+    /*-----------------------------KRAJ SCROLL BASED ANIMATION- JEDNOM------------------*/
+    /*------------------------------------------------------------------*/
+    /*-----------------------------REGEX ZA PROVJERU JEL JE MOBITEL I DODAVANJE PLAVE BOJE AKO JE-----------------*/
     window.mobilecheck = function() {
         var check = false;
         (function(a) {
@@ -152,20 +149,7 @@
         })(navigator.userAgent || navigator.vendor || window.opera);
         return check;
     }
-
-
     if (window.mobilecheck() == true) {
         $('#apartmani').addClass('plava');
     }
-
-
-    /* $(document).ready(function() {
-         $("#dialog-message").dialog({
-             modal: true,
-             buttons: {
-                 Ok: function() {
-                     $(this).dialog("close");
-                 }
-             }
-         });
-     });*/
+    /*-----------------------------KRAJ EGEX ZA PROVJERU JEL JE MOBITEL I DODAVANJE PLAVE BOJE AKO JE-----------------*/
